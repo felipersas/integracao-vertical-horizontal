@@ -1,0 +1,204 @@
+\documentclass[12pt,a4paper]{article}
+
+% Pacotes de codificação e linguagem
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+\usepackage{csquotes}
+
+% Pacotes de formatação
+\usepackage[margin=2.5cm,top=3cm,bottom=2cm]{geometry}
+\usepackage{setspace}
+\usepackage{parskip}
+\usepackage{titlesec}
+
+% Pacotes gráficos e cores
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{longtable}
+
+% Pacotes para links e referências
+\usepackage[pdftex]{hyperref}
+\usepackage{abntex2cite}
+
+% Configuração de cores para links
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=blue,
+    citecolor=blue,
+    pdftitle={Atividade 01: Análise da Integração Empresarial},
+    pdfauthor={Aluno},
+    pdfsubject={Integração Vertical e Horizontal},
+}
+
+% Configuração dos títulos das seções
+\titleformat{\section}
+  {\normalfont\Large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}
+  {\normalfont\large\bfseries}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}
+  {\normalfont\normalsize\bfseries}{\thesubsubsection}{1em}{}
+
+% Espaçamento entre linhas
+\onehalfspacing
+
+% Início do documento
+\begin{document}
+
+% Capa
+\begin{titlepage}
+\centering
+\vspace*{2cm}
+
+{\Huge\bfseries Atividade 01\par}
+\vspace{0.5cm}
+{\LARGE\bfseries Análise da Integração Empresarial\par}
+\vspace{1cm}
+{\Large Estudos de Caso: Klabin S.A. e Marfrig S.A.\par}
+
+\vspace{2cm}
+
+\begin{flushleft}
+\textbf{Disciplina:} Integração Vertical e Horizontal\\
+\textbf{Professor:} Me. Deivison S. Takatu\\
+\textbf{Data:} Fevereiro de 2026
+\end{flushleft}
+
+\vspace{2cm}
+
+\begin{flushright}
+\textbf{Aluno:} Felipe Marques\\
+\textbf{Curso:} Análise e Desenvolvimento de Sistemas\\
+\textbf{Instituição:} SENAI
+\end{flushright}
+
+\vfill
+
+\end{titlepage}
+
+% Sumário
+\tableofcontents
+\newpage
+
+% Conteúdo da Atividade
+\section{Introdução}
+
+A presente atividade tem como objetivo analisar como empresas promoteem a integração da organização como um todo e os impactos dessas estratégias na cadeia de valor, coordenação de processos e tomada de decisão estratégica. Para tanto, foram selecionados dois casos relevantes do cenário industrial brasileiro: \textbf{Klabin S.A.} e \textbf{Marfrig S.A.}, empresas que adotam estratégias distintas de integração --- vertical e horizontal, respectivamente ---, ambas com impactos significativos em seus modelos de negócio.
+
+A análise perpassará pela compreensão do posicionamento de cada empresa na cadeia de valor, a forma como coordenam seus processos e como as decisões estratégicas são tomadas a partir de suas estruturas integradas.
+
+\section{Klabin S.A. --- Integração Vertical como Controle de Cadeia}
+
+A Klabin exemplifica a \textbf{Integração Vertical} clássica no setor industrial brasileiro. A empresa controla múltiplos estágios da cadeia de valor, indo desde a floresta (matéria-prima) até a produção de papel e embalagens.
+
+\subsection{Posicionamento na Cadeia de Valor}
+
+Ao possuir e gerir seus próprios ativos florestais, a Klabin elimina a dependência de terceiros para o fornecimento de madeira, o insumo crítico da sua indústria. Isso cria uma \textbf{barreira de entrada} para concorrentes e estabiliza os custos de produção, um fator vital em um mercado de commodities.
+
+A empresa atua como uma organização verticalmente integrada, controlando:
+
+\begin{itemize}
+    \item \textbf{Base Florestal:} Florestas plantadas de pinus e eucalipto para fornecimento de madeira.
+    \item \textbf{Produção de Celulose:} Unidades industriais que transformam a madeira em celulose.
+    \item \textbf{Fabricação de Papel:} Conversão da celulose em diversos tipos de papel.
+    \item \textbf{Embalagens:} Produção de embalagens de papelão ondulado e sacos industriais.
+\end{itemize}
+
+\subsection{Coordenação dos Processos}
+
+A integração vertical permite que o planejamento da colheita de madeira (extrativismo) esteja sincronizado com a demanda das máquinas de papel. O fluxo de informações é contínuo: se houver queda na demanda de embalagens, a empresa ajusta o manejo florestal, evitando o acúmulo de estoque de madeira.
+
+Essa coordenação é facilitada por:
+
+\begin{itemize}
+    \item Sistemas de planejamento integrados que conectam o manejo florestal à produção industrial.
+    \item Previsão de demanda de longo prazo que orienta o plantio e colheita.
+    \item Logística interna otimizada entre florestas e unidades industriais.
+\end{itemize}
+
+\subsection{Tomada de Decisão Estratégica}
+
+O controle total da cadeia permite que decisões de investimento em novas tecnologias sejam tomadas com base em garantias de suprimento de longo prazo, reduzindo riscos operacionais e financeiros.
+
+Um exemplo emblemático é a unidade \textbf{``Puma''} em Ortigueira (PR), um dos maiores investimentos do setor de celulose e papel na história do Brasil. A decisão de investir aproximadamente R\$ 8,7 bilhões nesta unidade foi fundamentada na certeza do suprimento de matéria-prima proveniente das florestas próprias da empresa.
+
+\section{Marfrig S.A. --- Integração Horizontal como Expansão de Mercado}
+
+A Marfrig ilustra a \textbf{Integração Horizontal}, focada na aquisição e fusão com empresas que atuam no mesmo nível da cadeia de valor.
+
+\subsection{Posicionamento na Cadeia de Valor}
+
+Ao adquirir concorrentes (como a operação da BRF em mercados específicos ou empresas internacionais como a Keystone Foods e Moy Park), a Marfrig expandiu drasticamente sua participação no mercado e escala de produção. Isso aumentou seu poder de barganha frente a grandes varejistas globais (como McDonald's).
+
+A estratégia horizontal da Marfrig é caracterizada por:
+
+\begin{itemize}
+    \item \textbf{Aquisições Internacionais:} Keystone Foods (EUA) e Moy Park (Reino Unido).
+    \item \textbf{Expansão de Portfólio:} Incorporação de marcas e produtos de empresas adquiridas.
+    \item \textbf{Escala Global:} Posicionamento como um dos maiores processadores de proteína animal do mundo.
+\end{itemize}
+
+\subsection{Coordenação dos Processos}
+
+A integração horizontal permite a \textbf{padronização de processos} entre diferentes unidades. As melhores práticas de uma planta em uma região podem ser replicadas globalmente. Além disso, a logística de distribuição é otimizada, pois a empresa passa a controlar múltiplos pontos de entrada em mercados chave (América do Sul, Europa, Ásia).
+
+A coordenação é viabilizada por:
+
+\begin{itemize}
+    \item Protocolos operacionais padronizados em todas as unidades.
+    \item Sistemas de gestão integrados que permitem visibilidade global.
+    \item Centros de excelência que disseminam melhores práticas.
+\end{itemize}
+
+\subsection{Tomada de Decisão Estratégica}
+
+A estratégia horizontal reduz a competição direta e permite acessar portfólios de produtos mais amplos. As decisões estratégicas focam em \textbf{sinergias}: redução de custos administrativos, unificação de marcas em mercados onde antes eram concorrentes e aumento da capacidade de exportação.
+
+A aquisição da Keystone Foods, por exemplo, garantiu à Marfrig o fornecimento exclusivo para o McDonald's em diversos mercados, consolidando sua posição como fornecedor global de proteína animal para a rede de fast food.
+
+\section{Comparativo e Análise Integrada}
+
+Ao comparar as estratégias de Klabin e Marfrig, observa-se que ambas buscam aumentar a eficiência e a competitividade, por meio de caminhos distintos:
+
+\begin{table}[h]
+\centering
+\begin{tabular}{@{}p{5cm}|p{5cm}|p{5cm}@{}}
+\toprule
+\textbf{Aspecto} & \textbf{Klabin (Vertical)} & \textbf{Marfrig (Horizontal)} \\
+\midrule
+\textbf{Foco Principal} & Controle da cadeia produtiva & Expansão de mercado e escala \\
+\midrule
+\textbf{Benefício Central} & Estabilização de custos e garantia de fornecimento & Poder de barganha e diversificação \\
+\midrule
+\textbf{Risco Associado} & Alto investimento em ativos fixos & Desafios de integração cultural \\
+\midrule
+\textbf{Vantagem Competitiva} & Barreiras de entrada e previsibilidade & Acesso a novos mercados e clientes \\
+\bottomrule
+\end{tabular}
+\caption{Comparativo entre as estratégias de integração}
+\end{table}
+
+\section{Conclusão}
+
+Enquanto a Klabin usa a integração vertical para garantir \textbf{eficiência e controle do insumo}, a Marfrig usa a integração horizontal para garantir \textbf{domínio de mercado e escala}. Ambas, no entanto, utilizam essas estratégias para criar uma visão sistêmica do negócio, onde decisões operacionais impactam diretamente os resultados financeiros globais.
+
+A escolha entre integração vertical ou horizontal depende das características específicas de cada setor, dos recursos disponíveis e da estratégia competitiva almejada. No caso apresentado, ambas as empresas demonstram sucesso em suas respectivas abordagens, comprovando que não há um modelo único de integração --- mas sim estratégias que devem ser alinhadas ao contexto e aos objetivos organizacionais.
+
+\section{Referências Bibliográficas}
+
+\begin{enumerate}
+    \item \textbf{KLABIN.} Relatório Anual e de Sustentabilidade 2023. Disponível em: \url{https://www.klabin.com.br/ri/}. Acesso em: fev. 2026.
+
+    \item \textbf{MARFRIG.} Relatório Anual e de Sustentabilidade 2023. Disponível em: \url{https://marfrig.com.br/ri/}. Acesso em: fev. 2026.
+
+    \item \textbf{TAKATU, Deivison S.} Aula 02 --- Integração Vertical e Horizontal nas Empresas. Apresentação, 2024.
+
+    \item \textbf{PORTER, Michael E.} Vantagem Competitiva: Criando e Sustentando um Desempenho Superior. Rio de Janeiro: Campus, 1989.
+
+    \item \textbf{CHANDLER, Alfred D.} Strategy and Structure: Chapters in the History of the Industrial Enterprise. Cambridge: MIT Press, 1962.
+\end{enumerate}
+
+\end{document}

@@ -1,0 +1,366 @@
+\documentclass[12pt,a4paper]{article}
+
+% Pacotes de codificação e linguagem
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+\usepackage{csquotes}
+
+% Pacotes de formatação
+\usepackage[margin=2.5cm,top=3cm,bottom=2cm]{geometry}
+\usepackage{setspace}
+\usepackage{parskip}
+\usepackage{titlesec}
+
+% Pacotes gráficos e cores
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{longtable}
+
+% Pacotes para links e referências
+\usepackage[pdftex]{hyperref}
+\usepackage{abntex2cite}
+
+% Configuração de cores para links
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=blue,
+    citecolor=blue,
+    pdftitle={Atividade 02: Planejamento Estratégico de Integração Industrial},
+    pdfauthor={Aluno},
+    pdfsubject={Integração Vertical e Horizontal},
+}
+
+% Configuração dos títulos das seções
+\titleformat{\section}
+  {\normalfont\Large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}
+  {\normalfont\large\bfseries}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}
+  {\normalfont\normalsize\bfseries}{\thesubsubsection}{1em}{}
+
+% Espaçamento entre linhas
+\onehalfspacing
+
+% Início do documento
+\begin{document}
+
+% Capa
+\begin{titlepage}
+\centering
+\vspace*{2cm}
+
+{\Huge\bfseries Atividade 02\par}
+\vspace{0.5cm}
+{\LARGE\bfseries Planejamento Estratégico de Integração Industrial\par}
+\vspace{1cm}
+{\Large Simulação: Indústria de Proteínas ``AgroTech S.A.''\par}
+
+\vspace{2cm}
+
+\begin{flushleft}
+\textbf{Disciplina:} Integração Vertical e Horizontal\\
+\textbf{Professor:} Me. Deivison S. Takatu\\
+\textbf{Data:} Fevereiro de 2026
+\end{flushleft}
+
+\vspace{2cm}
+
+\begin{flushright}
+\textbf{Aluno:} Felipe Marques\\
+\textbf{Curso:} Análise e Desenvolvimento de Sistemas\\
+\textbf{Instituição:} SENAI
+\end{flushright}
+
+\vfill
+
+\end{titlepage}
+
+% Sumário
+\tableofcontents
+\newpage
+
+% Conteúdo da Atividade
+\section{Introdução}
+
+O presente trabalho consiste em um planejamento estratégico simulado para uma indústria de processamento de proteína animal, abordando tanto a \textbf{integração vertical} (níveis hierárquicos) quanto a \textbf{integração horizontal} (processos e áreas), com propostas de Tecnologia da Informação para aumentar a integração na cadeia de valor.
+
+O setor de processamento de proteína animal foi escolhido por ser um ambiente complexo, altamente regulado e com múltiplas interfaces (fornecedores, produção, logística, clientes), ideal para aplicar os conceitos de automação e TI da disciplina.
+
+A empresa simulada, denominada \textbf{AgroTech S.A.}, busca transformar seu ambiente produtivo de um sistema serial e isolado para um ecossistema conectado, alinhado aos princípios da Indústria 4.0.
+
+\section{Integração Vertical: Coluna Digital}
+
+A integração vertical na AgroTech S.A. tem como objetivo criar uma ``Coluna Digital'' que conecte os sensores nas plantas industriais (frigoríficos) à diretoria executiva, garantindo que a eficiência operacional do chão de fábrica se traduza em lucro financeiro imediato e previsível.
+
+\subsection{Nível Operacional --- Chão de Fábrica}
+
+No nível operacional, a proposta é implementar \textbf{IoT Industrial} (Internet das Coisas Industrial) nas linhas de processamento.
+
+\subsubsection{Tecnologia Proposta}
+
+Implementação de uma rede de sensores e atuadores inteligentes distribuídos ao longo da linha de produção:
+
+\begin{itemize}
+    \item \textbf{Sensores de Temperatura e Umidade:} Instalados em câmaras frias e ao longo da linha de processamento para monitoramento contínuo das condições de armazenamento.
+    \item \textbf{Sensores RFID:} Para rastreamento individual de carcaças e cortes, garantindo rastreabilidade completa.
+    \item \textbf{Câmeras de Visão Computacional:} Para classificação automática da carne por grau de acabamento, presença de defeitos e conformidade com padrões de qualidade.
+    \item \textbf{Balanças Inteligentes:} Conectadas à rede para pesagem automática e cálculo de rendimento em tempo real.
+\end{itemize}
+
+\subsubsection{Funcionamento}
+
+Os sensores coletam dados continuamente e os transmitem via rede industrial (padrão Ethernet/IP ou PROFINET) para um sistema de edge computing, onde são pré-processados antes do envio aos níveis superiores.
+
+\subsubsection{Benefícios}
+
+\begin{itemize}
+    \item Garantia de segurança dos alimentos através de monitoramento constante de condições críticas (temperatura).
+    \item Conformidade com normas sanitárias locais e internacionais (MAPA, USDA, ISO 22000).
+    \item Detecção precoce de variações no processo produtivo que possam afetar a qualidade.
+\end{itemize}
+
+\subsection{Nível de Controle --- SCADA/MES}
+
+No nível de controle, a proposta é implementar um \textbf{Sistema de Execução de Manufatura (MES)} integrado.
+
+\subsubsection{Tecnologia Proposta}
+
+Implementação de um MES (Manufacturing Execution System) com as seguintes funcionalidades:
+
+\begin{itemize}
+    \item \textbf{Rastreamento de Produção:} Monitoramento em tempo real do status de cada ordem de produção.
+    \item \textbf{Gestão de Qualidade:} Registro automático de resultados de inspeção e testes de qualidade.
+    \item \textbf{Análise de Rendimento:} Cálculo automático de rendimento por animal, por lote e por linha de produção.
+    \item \textbf{Genealogia do Produto:} Registro completo do histórico de produção para cada unidade produzida.
+\end{itemize}
+
+\subsubsection{Funcionamento}
+
+O MES coleta os dados dos sensores (rendimento por animal, peso, classificação de corte) e os padroniza em um formato estruturado. O sistema realiza validações, alertas e tomadas de decisão automatizadas baseadas em regras de negócio configuráveis.
+
+\subsubsection{Benefícios}
+
+\begin{itemize}
+    \item Eliminação da necessidade de digitação manual de dados de produção, reduzindo erros humanos.
+    \item Visibilidade em tempo real do status da produção para supervisores e gerentes.
+    \item Base de dados estruturada para análise histórica e melhoria contínua.
+\end{itemize}
+
+\subsection{Nível Estratégico --- ERP/BI}
+
+No nível estratégico, a proposta é integrar os dados operacionais aos sistemas de gestão empresarial.
+
+\subsubsection{Tecnologia Proposta}
+
+\begin{itemize}
+    \item \textbf{Integração via API com ERP:} Conexão do MES ao sistema ERP (SAP, Totvs, etc.) para automação dos processos financeiros e de estoque.
+    \item \textbf{Painéis de Business Intelligence (BI):} Implementação de dashboards executivos para visualização de KPIs em tempo real.
+    \item \textbf{Data Warehouse Industrial:} Repositório centralizado para análise histórica de dados de produção.
+\end{itemize}
+
+\subsubsection{Funcionamento}
+
+Os dados de rendimento do chão de fábrica alimentam automaticamente o módulo financeiro e de estoque do ERP. Diretores visualizam o custo de produção por unidade em tempo real via BI. Alertas são gerados automaticamente quando indicadores saem da faixa esperada.
+
+\subsubsection{Impacto na Decisão}
+
+\begin{itemize}
+    \item Se o custo de produção subir na Unidade A em tempo real, o gestor pode ajustar preços de venda instantaneamente antes que o dia acabe.
+    \item Previsão mais precisa de custos e margens baseada em dados reais, não em estimativas.
+    \item Simulação de cenários ``what-if'' para suporte à tomada de decisão estratégica.
+\end{itemize}
+
+\section{Integração Horizontal: Cadeia de Valor Conectada}
+
+A integração horizontal na AgroTech S.A. tem como objetivo conectar o \textbf{Fornecedor (Pecuarista)}, a \textbf{Produção}, a \textbf{Logística} e o \textbf{Cliente (Varejista)}, eliminando silos de informação e garantindo que o produto certo chegue ao lugar certo no tempo exato.
+
+\subsection{Suprimentos e Fornecedores --- Pecuária 4.0}
+
+A integração com fornecedores de gado é crítica para garantir qualidade e segurança.
+
+\subsubsection{Tecnologia Proposta}
+
+Implementação de uma \textbf{Plataforma Digital de Integração com Fornecedores}, composta por:
+
+\begin{itemize}
+    \item \textbf{Portal Web e App Mobile:} Interface para pecuaristas cadastrarem e gerenciarem seu gado.
+    \item \textbf{Sistema de Rastreamento via Blockchain:} Para garantir a origem e a procedência do gado.
+    \item \textbf{Módulo de Gestão de Pagamentos:} Para transparência financeira e fidelização do produtor.
+\end{itemize}
+
+\subsubsection{Funcionamento}
+
+Os pecuaristas cadastram seu gado na plataforma, incluindo informações sanitárias, alimentares e de origem. A AgroTech utiliza rastreamento via blockchain para garantir a rastreabilidade completa. O sistema permite que o fornecedor acompanhe o status do pagamento em tempo real.
+
+\subsubsection{Benefícios}
+
+\begin{itemize}
+    \item Transparência na cadeia de suprimentos, aumentando a confiança dos fornecedores.
+    \item Fidelização do produtor rural através de relacionamento mais transparente.
+    \item Garantia de procedência e qualidade do insumo (gado).
+\end{itemize}
+
+\subsection{Logística e Distribuição --- Smart Logistics}
+
+A logística de produtos perecíveis requer controle preciso de temperatura e prazos.
+
+\subsubsection{Tecnologia Proposta}
+
+Implementação de um \textbf{Sistema de Gerenciamento de Transporte (TMS)} integrado a:
+
+\begin{itemize}
+    \item \textbf{Rastreamento Satelital:} GPS em toda a frota (própria ou terceirizada).
+    \item \textbf{Sensores de Temperatura:} Monitoramento da temperatura dos caminhões em tempo real.
+    \item \textbf{Algoritmos de Roteirização:} Otimização automática de rotas baseada em trânsito, janela de entrega e requisitos de temperatura.
+\end{itemize}
+
+\subsubsection{Funcionamento}
+
+O sistema aloca automaticamente os caminhões da frota baseando-se na rota mais eficiente e temperatura exigida pelo produto. O cliente final (supermercado) recebe um link para rastrear a carga e monitorar a temperatura durante o transporte. Alertas são gerados automaticamente caso haja quebra da cadeia de frio.
+
+\subsubsection{Benefícios}
+
+\begin{itemize}
+    \item Redução de perdas de carga por quebra de cadeia de frio.
+    \item Melhoria na experiência do cliente através de transparência e previsibilidade.
+    \item Otimização da utilização da frota, reduzindo custos de transporte.
+\end{itemize}
+
+\subsection{Vendas e Clientes --- Integração B2B}
+
+A integração com grandes varejistas é essencial para escala e eficiência.
+
+\subsubsection{Tecnologia Proposta}
+
+Implementação de um \textbf{Portal de Pedidos EDI (Electronic Data Interchange)}, composto por:
+
+\begin{itemize}
+    \item \textbf{Integração EDI:} Comunicação direta entre os sistemas da AgroTech e dos grandes varejistas (Carrefour, Walmart, etc.).
+    \item \textbf{API REST:} Interface moderna para integração com varejistas digitais.
+    \item \textbf{Catálogo Eletrônico de Produtos:} Mantido sincronizado automaticamente.
+\end{itemize}
+
+\subsubsection{Funcionamento}
+
+Quando o estoque no varejo baixa, o pedido é gerado automaticamente na AgroTech através do EDI. O sistema valida automaticamente crédito, estoque e condições de entrega. O processo é totalmente automatizado, sem intervenção manual.
+
+\subsubsection{Benefícios}
+
+\begin{itemize}
+    \item Resposta rápida à demanda de mercado.
+    \item Redução do ``Bullwhip Effect'' (efeito chicote na cadeia de suprimentos).
+    \item Eliminação de erros de processamento de pedidos manuais.
+    \item Melhoria no nível de serviço ao cliente.
+\end{itemize}
+
+\section{Arquitetura de Integração}
+
+A arquitetura tecnológica proposta para a AgroTech S.A. segue uma abordagem em camadas, conforme ilustrado na Figura 1.
+
+\subsection{Arquitetura em Camadas}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{@{}p{3cm}|p{10cm}@{}}
+\toprule
+\textbf{Camada} & \textbf{Componentes} \\
+\midrule
+\textbf{Apresentação} & Dashboards BI, Portal Web, App Mobile, Relatórios Gerenciais \\
+\midrule
+\textbf{Processos} & ERP, CRM, TMS, Sistema de Qualidade, Sistema Financeiro \\
+\midrule
+\textbf{Controle} & MES, SCADA, PLCs, Controladores de Processo \\
+\midrule
+\textbf{Sensoriamento} & IoT, Sensores, Atuadores, RFID, Visão Computacional \\
+\midrule
+\textbf{Integração} & API Gateway, ESB, EDI, Blockchain \\
+\bottomrule
+\end{tabular}
+\caption{Arquitetura tecnológica proposta para AgroTech S.A.}
+\end{table}
+
+\subsection{Fluxo de Dados}
+
+O fluxo de dados proposto segue o sentido vertical (do chão de fábrica à estratégia) e horizontal (ao longo da cadeia de valor):
+
+\begin{enumerate}
+    \item \textbf{Coleta:} Sensores IoT coletam dados do processo produtivo.
+    \item \textbf{Padronização:} MES padroniza e valida os dados coletados.
+    \item \textbf{Integração:} API Gateway integra dados ao ERP e sistemas externos.
+    \item \textbf{Análise:} BI e Data Analytics geram insights e alertas.
+    \item \textbf{Ação:} Tomada de decisão automatizada ou suportada por dados.
+\end{enumerate}
+
+\section{Benefícios Esperados}
+
+A implementação do planejamento proposto deve gerar benefícios significativos para a AgroTech S.A.:
+
+\subsection{Benefícios Operacionais}
+
+\begin{itemize}
+    \item Aumento da eficiência produtiva através de monitoramento em tempo real.
+    \item Redução de desperdícios e refugo através de detecção precoce de problemas.
+    \item Melhoria na utilização dos ativos produtivos.
+    \item Redução do tempo de setup entre trocas de produção.
+\end{itemize}
+
+\subsection{Benefícios Financeiros}
+
+\begin{itemize}
+    \item Redução de custos de produção através de otimização de processos.
+    \item Redução de perdas de carga e quebra de cadeia de frio.
+    \item Melhoria de margens através de precificação dinâmica baseada em custos reais.
+    \item Redução de custos administrativos através de automação de processos.
+\end{itemize}
+
+\subsection{Benefícios Estratégicos}
+
+\begin{itemize}
+    \item Diferenciação competitiva através de rastreabilidade completa.
+    \item Fortalecimento da marca através de transparência e sustentabilidade.
+    \item Maior agilidade na resposta a mudanças de mercado.
+    \item Base para inovações futuras (IA, Machine Learning, Gêmeos Digitais).
+\end{itemize}
+
+\subsection{Benefícios de Qualidade e Segurança}
+
+\begin{itemize}
+    \item Garantia de conformidade com normas sanitárias e internacionais.
+    \item Rastreabilidade completa ``do campo ao prato''.
+    \item Resposta mais rápida a eventuais recalls ou problemas de qualidade.
+    \item Melhoria contínua baseada em dados históricos.
+\end{itemize}
+
+\section{Conclusão}
+
+O planejamento estratégico de integração industrial apresentado para a AgroTech S.A. demonstra como a aplicação sistemática de tecnologias da informação e automação pode transformar uma indústria de processamento de proteína animal.
+
+A \textbf{Integração Vertical} proposta --- conectando sensores no chão de fábrica aos sistemas de gestão estratégica --- garante que a eficiência operacional se traduza em resultados financeiros imediatos e previsíveis. Já a \textbf{Integração Horizontal} --- conectando fornecedores, produção, logística e clientes --- elimina silos de informação e garante que o produto certo chegue ao lugar certo no tempo exato.
+
+A implementação deste planejamento transformaria o ambiente produtivo da empresa de um sistema serial e isolado para um ecossistema conectado, alinhado aos princípios da Indústria 4.0 e posicionando a empresa para competir efetivamente em um mercado global cada vez mais exigente.
+
+Os benefícios esperados --- operacionais, financeiros, estratégicos e de qualidade --- demonstram que o investimento em integração vertical e horizontal não é apenas uma questão tecnológica, mas uma necessidade estratégica para qualquer indústria que aspire à liderança em seu setor.
+
+\section{Referências Bibliográficas}
+
+\begin{enumerate}
+    \item \textbf{TAKATU, Deivison S.} Aula 02 --- Integração Vertical e Horizontal nas Empresas. Apresentação, 2024.
+
+    \item \textbf{KAGERMANN, Henning et al.} Recommendations for Implementing Strategic Initiative Industrie 4.0: Securing the Future of German Manufacturing Industry. Final Report of the Industrie 4.0 Working Group, 2013.
+
+    \item \textbf{LEE, Jay et al.} Industrial Artificial Intelligence: A Literature Review and Future Research Directions. In: \textit{Journal of Intelligent Manufacturing}, 2021.
+
+    \item \textbf{MONOSTORI, László et al.} Cyber-Physical Systems in Manufacturing. In: \textit{CIRP Annals}, 2016.
+
+    \item \textbf{ZHONG, Ray Y. et al.} Robotics in Manufacturing: A Review. In: \textit{International Journal of Production Research}, 2017.
+
+    \item \textbf{LARA, Carla Eduarda Orlando de Moraes de.} Automação e controle industrial. Curitiba: Contentus, 2021.
+
+    \item \textbf{CAIÇARA JÚNIOR, Cícero.} Sistemas integrados de gestão: ERP – uma abordagem gerencial. Curitiba: Intersaberes, 2015.
+\end{enumerate}
+
+\end{document}
