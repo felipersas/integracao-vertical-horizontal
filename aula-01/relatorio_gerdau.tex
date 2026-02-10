@@ -1,0 +1,196 @@
+\documentclass[12pt,a4paper]{article}
+
+% Pacotes de codificação e linguagem
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+\usepackage{csquotes}
+
+% Pacotes de formatação
+\usepackage[margin=2.5cm,top=3cm,bottom=2cm]{geometry}
+\usepackage{setspace}
+\usepackage{parskip}
+\usepackage{titlesec}
+
+% Pacotes gráficos e cores
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{longtable}
+
+% Pacotes para links e referências
+\usepackage[pdftex]{hyperref}
+\usepackage{abntex2cite}
+
+% Configuração de cores para links
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=blue,
+    citecolor=blue,
+    pdftitle={Relatório Técnico: Transformação Digital na Siderurgia},
+    pdfauthor={Aluno},
+    pdfsubject={Integração Vertical e Horizontal},
+}
+
+% Configuração dos títulos das seções
+\titleformat{\section}
+  {\normalfont\Large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}
+  {\normalfont\large\bfseries}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}
+  {\normalfont\normalsize\bfseries}{\thesubsubsection}{1em}{}
+
+% Espaçamento entre linhas
+\onehalfspacing
+
+% Início do documento
+\begin{document}
+
+% Capa
+\begin{titlepage}
+\centering
+\vspace*{2cm}
+
+{\Huge\bfseries Relatório Técnico\par}
+\vspace{0.5cm}
+{\LARGE\bfseries Transformação Digital na Siderurgia\par}
+\vspace{1cm}
+{\Large Análise da Integração Vertical e Horizontal na Gerdau S.A.\par}
+
+\vspace{2cm}
+
+\begin{flushleft}
+\textbf{Disciplina:} Integração Vertical e Horizontal\\
+\textbf{Professor:} Me. Deivison S. Takatu\\
+\textbf{Data:} Fevereiro de 2026
+\end{flushleft}
+
+\vspace{2cm}
+
+\begin{flushright}
+\textbf{Aluno:} [Seu Nome Completo]\\
+\textbf{Curso:} [Seu Curso]\\
+\textbf{Instituição:} [Sua Instituição de Ensino]
+\end{flushright}
+
+\vfill
+
+\end{titlepage}
+
+% Sumário
+\tableofcontents
+\newpage
+
+% Conteúdo do Relatório
+\section{Introdução}
+
+A indústria contemporânea está passando por uma revolução silenciosa, porém profunda, impulsionada pela necessidade de competitividade em um cenário globalizado e digitalizado. Conforme abordado na disciplina ``Integração Vertical e Horizontal'', a manufactura moderna deixou de ser composta por máquinas isoladas operando em ``ilhas de automação'' para se tornar um ecossistema conectado, onde a informação é o ativo estratégico mais valioso.
+
+Neste contexto, a integração de sistemas deixa de ser uma opção tecnológica para se tornar um requisito estratégico. A \textbf{integração vertical}, que articula os diferentes níveis operacionais do chão de fábrica até a gestão estratégica, e a \textbf{integração horizontal}, que conecta toda a cadeia de valor desde fornecedores até o cliente final, são fundamentais para garantir a agilidade e a precisão na tomada de decisão.
+
+O presente relatório apresenta um estudo de caso real sobre a \textbf{Gerdau S.A.}, maior produtora de aços longos das Américas. O objetivo é analisar como a implementação desses conceitos de integração favoreceu a empresa, impulsionando sua eficiência operacional, reduzindo custos e assegurando sua liderança em um mercado de commodities de alta competitividade. A análise perpassará pelos fundamentos tecnológicos, sistemas corporativos e o uso estratégico de dados industriais.
+
+\section{Perfil da Empresa}
+
+A Gerdau é uma empresa brasileira com atuação global, líder no mercado de aços longos nas Américas e uma das principais fornecedoras de aços especiais do mundo. Fundada em 1901, no Rio Grande do Sul, a empresa consolidou seu crescimento através de uma combinação de gestão sólida e capacidade de inovação.
+
+\subsection{Dados Reais e Contexto Atual}
+
+\begin{itemize}
+    \item \textbf{Faturamento (2023):} R\$ 78,5 bilhões, demonstrando robustez mesmo em cenários econômicos desafiadores.
+    \item \textbf{Capacidade Produtiva:} Aproximadamente 26 milhões de toneladas de aço por ano.
+    \item \textbf{Presença Geográfica:} Operações industriais em 10 países e atuação comercial em mais de 20 nações.
+    \item \textbf{Colaboradores:} Cerca de 30 mil profissionais ao redor do mundo.
+    \item \textbf{Modelo de Negócio:} A Gerdau atua desde a produção de aço até a transformação e distribuição de produtos siderúrgicos, atendendo setores como a construção civil, indústria automotiva, agroindústria e energia.
+\end{itemize}
+
+Um ponto central da estratégia recente da Gerdau é o programa \textbf{Gerdau Next}, que visa redefinir o futuro da companhia através da transformação digital, sustentabilidade e inovação. É dentro deste programa que as integrações vertical e horizontal ganham destaque.
+
+\section{Integração Vertical na Gerdau: Do Forno à Estratégia}
+
+A Integração Vertical na Gerdau consiste na articulação efetiva entre o nível de controle (chão de fábrica) e o nível corporativo (gestão). Na siderurgia, esse desafio é monumental devido à complexidade dos processos de fabricação de aço.
+
+\subsection{Automação e Fundamentos Tecnológicos}
+
+As usinas da Gerdau, como a Usina Riograndense (RS) e Ouro Branco (MG), operam com altos índices de automação. O processo siderúrgico envolve altíssimas temperaturas e reações químicas complexas. Para garantir a qualidade do aço, a empresa utiliza:
+
+\begin{itemize}
+    \item \textbf{Sistemas de Controle Distribuído (DCS):} Para o controle global do processo de fabricação.
+    \item \textbf{CLPs (Controladores Lógicos Programáveis):} Para o controle local de máquinas específicas, como laminadores e fornos.
+\end{itemize}
+
+A integração vertical ocorre quando os dados gerados por esses dispositivos (nível 0 e 1 da pirâmide da automação) não ficam presos nos painéis de operação, mas são transportados via redes industriais até os sistemas de supervisão (SCADA) e, posteriormente, aos sistemas de gestão empresarial (ERP -- \textit{Enterprise Resource Planning}).
+
+\subsection{Manutenção Preditiva e IIoT}
+
+Um exemplo prático dessa integração é o uso da \textbf{Internet das Coisas Industriais (IIoT)}. A Gerdau instalou sensores inteligentes em ativos críticos, como motores de grandes dimensões, redutores e transformadores.
+
+Esses sensores coletam dados de vibração, temperatura e corrente elétrica em tempo real. Antigamente, essa informação seria monitorada apenas localmente. Hoje, através da integração vertical, os dados são enviados para uma nuvem corporativa onde algoritmos analisam a ``saúde'' do equipamento.
+
+\subsubsection{Benefício}
+
+Isso permite a \textbf{Manutenção Preditiva}. Em vez de consertar a máquina quando ela quebra (reativo) ou fazer manutenção em intervalos fixos (preventivo), a empresa intervém exatamente quando necessário, baseada em dados. Isso reduz paradas não planejadas e aumenta a vida útil dos ativos, impactando diretamente o resultado financeiro (nível estratégico).
+
+\section{Integração Horizontal na Gerdau: Cadeia de Valor Conectada}
+
+Enquanto a integração vertical foca na eficiência interna, a integração horizontal na Gerdau foca na fluidez dos processos ao longo da cadeia de valor: fornecedores, produção, logística e clientes. O objetivo é eliminar ``silos organizacionais'' onde departamentos como compras, vendas e logística agiam de forma independente.
+
+\subsection{Integração com Fornecedores e Reciclagem}
+
+A Gerdau é o maior reciclador da América Latina. O principal insumo de suas usinas elétricas (Fornos a Arco Elétrico) é a sucata ferrosa (ferro velho). A integração horizontal permite conectar os fornecedores de sucata diretamente ao sistema de planejamento da produção da usina.
+
+Isso garante que o fluxo de matéria-prima seja sincronizado com a necessidade de fundição, evitando filas de caminhões na portaria e garantindo que os fornos nunca parem por falta de material.
+
+\subsection{Logística e Distribuição Integrada}
+
+Na ponta da venda, a integração horizontal é fundamental para a experiência do cliente. Através da conexão entre o sistema de vendas (CRM) e o sistema logístico (WMS -- \textit{Warehouse Management System} e TMS -- \textit{Transportation Management System}), a Gerdau consegue oferecer transparência total.
+
+Quando um cliente faz um pedido de vergalhões para uma obra, o sistema verifica automaticamente o estoque no centro de distribuição mais próximo, aloca a carga e define a rota de entrega otimizada.
+
+\subsection{Gerdau Marketplace}
+
+Um marco na integração horizontal foi o lançamento do \textbf{Gerdau Marketplace}, uma plataforma digital B2B. Essa ferramenta integra a base de clientes da construção civil diretamente à frota logística e ao estoque da empresa. O cliente pode comprar, agendar entrega e rastrear o pedido online, criando uma ponte direta que elimina intermediários burocráticos e acelera o fluxo de informações.
+
+\section{Dados Industriais e Inteligência de Negócios (BI)}
+
+Conforme visto na disciplina, a ``Informação como Ativo Estratégico'' é crucial. Na Gerdau, a massa de dados gerada pela integração vertical e horizontal é tratada através de ferramentas de Business Intelligence (BI) e Inteligência Artificial.
+
+\subsection{Otimização do Mix de Produtos}
+
+Através da análise de dados históricos de venda e custos de produção, a empresa utiliza algoritmos para sugerir o melhor mix de produtos a ser fabricado em cada usina. Por exemplo, analisar se é mais eficiente produzir aço para a construção civil em uma usina específica baseando-se no consumo de energia e disponibilidade de insumos naquele momento.
+
+\subsection{Rastreabilidade e Qualidade}
+
+Para clientes de segmentos exigentes, como a indústria automotiva, a rastreabilidade é mandatória. A integração de sistemas permite que a Gerdau rastreie um vergalhão ou uma peça de aço até a corrida de fundição específica. Se houver uma não-conformidade, a empresa consegue identificar exatamente quais lotes foram afetados, agilizando recalls e garantindo a segurança.
+
+\subsection{Eficiência Energética}
+
+A energia elétrica representa um dos maiores custos na produção de aço. Através do monitoramento integrado dos dados dos medidores de energia em todo o parque fabril, a empresa consegue identificar padrões de consumo e automatizar o funcionamento de equipamentos para operar em horários de menor tarifa ou menor demanda, resultando em economia de milhões de reais anuais.
+
+\section{Conclusão}
+
+O estudo de caso da Gerdau S.A. ilustra claramente a teoria apresentada na disciplina: a indústria moderna deve operar como um ecossistema conectado.
+
+A aplicação da \textbf{Integração Vertical} permitiu que a Gerdau transformasse o chão de fábrica, tradicionalmente isolado, em uma fonte rica de dados para a tomada de decisão estratégica, possibilitando a manutenção preditiva e o controle preciso da produção. Já a \textbf{Integração Horizontal} foi responsável por alinhar a operação com o mercado, conectando a coleta de sucata à entrega do produto final, eliminando barreiras entre departamentos e criando valor para o cliente através de plataformas digitais.
+
+O resultado dessa abordagem integrada é refletido na solidez financeira da empresa e na sua capacidade de inovar. A Gerdau deixa de ser vista apenas como uma siderúrgica tradicional e se posiciona como uma empresa de tecnologia industrial, provando que a transformação digital é o caminho inevitável para a competitividade na Indústria 4.0.
+
+\section{Referências Bibliográficas}
+
+% Usando citações manuais em formato bibliográfico
+
+\begin{enumerate}
+    \item \textbf{GERDAU.} Relatório Anual e de Sustentabilidade 2023. Disponível em: \url{https://www.gerdau.com.br/investidores/relatorio-anual}. Acesso em: fev. 2026.
+
+    \item \textbf{GERDAU.} Programa Gerdau Next - Transformação Digital. Disponível em: \url{https://www.gerdau.com.br/pt-br/inovacao}. Acesso em: fev. 2026.
+
+    \item \textbf{TAKATU, Deivison S.} Apresentação da Disciplina e Contextualização: Integração Vertical e Horizontal. Aula 01, 2024.
+
+    \item \textbf{LARA, Carla Eduarda Orlando de Moraes de.} Automação e controle industrial. Curitiba: Contentus, 2021.
+
+    \item \textbf{CAIÇARA JÚNIOR, Cícero.} Sistemas integrados de gestão: ERP – uma abordagem gerencial. Curitiba: Intersaberes, 2015.
+\end{enumerate}
+
+\end{document}
