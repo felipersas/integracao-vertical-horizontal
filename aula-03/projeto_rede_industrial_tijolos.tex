@@ -1,0 +1,582 @@
+\documentclass[12pt,a4paper]{article}
+
+% Pacotes de codificação e linguagem
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+\usepackage{csquotes}
+
+% Pacotes de formatação
+\usepackage[margin=2.5cm,top=3cm,bottom=2cm]{geometry}
+\usepackage{setspace}
+\usepackage{parskip}
+\usepackage{titlesec}
+
+% Pacotes gráficos e cores
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{colortbl}
+
+% Pacotes para links e referências
+\usepackage[pdftex]{hyperref}
+\usepackage{abntex2cite}
+
+% Configuração de cores para links
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=blue,
+    citecolor=blue,
+    pdftitle={Projeto de Rede Industrial: Fábrica de Tijolos Ecológicos},
+    pdfauthor={Felipe Marques},
+    pdfsubject={Redes Industriais},
+}
+
+% Configuração dos títulos das seções
+\titleformat{\section}
+  {\normalfont\Large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}
+  {\normalfont\large\bfseries}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}
+  {\normalfont\normalsize\bfseries}{\thesubsubsection}{1em}{}
+
+% Espaçamento entre linhas
+\onehalfspacing
+
+
+% Início do documento
+\begin{document}
+
+% Capa
+\begin{titlepage}
+\centering
+\vspace*{2cm}
+
+{\Huge\bfseries Projeto de Rede Industrial\par}
+\vspace{0.5cm}
+{\LARGE\bfseries Proposta Técnica e Econômica\par}
+\vspace{1cm}
+{\Large Fábrica de Tijolos Ecológicos\par}
+
+\vspace{2cm}
+
+\begin{flushleft}
+\textbf{Disciplina:} Redes Industriais\\
+\textbf{Professor:} Me. Deivison S. Takatu\\
+\textbf{Data:} Março de 2026
+\end{flushleft}
+
+\vspace{2cm}
+
+\begin{flushright}
+\textbf{Aluno:} Felipe Marques\\
+\textbf{Curso:} Análise e Desenvolvimento de Sistemas\\
+\textbf{Instituição:} SENAI
+\end{flushright}
+
+\vfill
+
+\end{titlepage}
+
+% Sumário
+\tableofcontents
+\newpage
+
+% Conteúdo do Projeto
+\section{Introdução}
+
+O presente projeto consiste em uma proposta técnica e econômica completa para a implementação de uma infraestrutura de rede industrial em uma fábrica de tijolos ecológicos. O objetivo é criar um sistema de automação robusto, escalável e integrado, que permita o controle, monitoramento e a futura integração com sistemas corporativos (ERP), seguindo os fundamentos de redes industriais e os requisitos críticos de ambientes produtivos.
+
+A fabricação de tijolos ecológicos é um processo que exige controle preciso de variáveis como temperatura, umidade, pressão e tempo de cura. A automação adequada desses processos resulta em ganhos significativos de qualidade, produtividade e sustentabilidade, além de reduzir desperdícios e consumo de energia.
+
+\section{Descrição do Ambiente Produtivo}
+
+\subsection{Características da Fábrica de Tijolos Ecológicos}
+
+A fábrica de tijolos ecológicos é um ambiente industrial com características específicas que impactam diretamente o projeto de rede:
+
+\begin{itemize}
+    \item \textbf{Processo Produtivo:} Mistura de solo-cimento, prensagem, cura a vapor e armazenamento
+    \item \textbf{Condições Ambientais:} Alta umidade (câmaras de cura), presença de poeira (solo/brita), vibração (prensa hidráulica)
+    \item \textbf{Temperatura:} Variação de 15°C a 85°C (câmaras de cura)
+    \item \textbf{Layout:} Galpão industrial de aproximadamente 2.000 m², dividido em 4 áreas principais
+\end{itemize}
+
+\subsection{Requisitos Críticos do Ambiente}
+
+Conforme estudado na disciplina, redes industriais devem atender requisitos críticos que diferenciam-no de redes corporativas:
+
+\begin{table}[h]
+\centering
+\begin{tabular}{@{}p{4cm}|p{10cm}@{}}
+\toprule
+\textbf{Requisito} & \textbf{Descrição e Aplicação} \\
+\midrule
+\textbf{Robustez} & Equipamentos devem ser industriais (não adaptados de escritório), com tolerância a ruído elétrico, vibração e poeira. Necessário grau de proteção IP67 para áreas de cura. \\
+\midrule
+\textbf{Determinismo} & A comunicação deve garantir tempo de resposta previsível para sincronização dos processos de prensagem e cura. \\
+\midrule
+\textbf{Disponibilidade} & A arquitetura deve priorizar o uptime, evitando pontos únicos de falha que parem a produção. \\
+\midrule
+\textbf{Segurança} & Proteção contra acesso não autorizado e falhas que podem causar danos materiais ou pessoais. \\
+\bottomrule
+\end{tabular}
+\caption{Requisitos críticos aplicados à fábrica de tijolos}
+\end{table}
+
+\section{Plano Orçamentário e Levantamento Técnico}
+
+Esta seção apresenta o levantamento detalhado dos equipamentos necessários para a infraestrutura de comunicação e automação da fábrica de tijolos ecológicos.
+
+\subsection{Controladores Lógicos Programáveis (CLPs)}
+
+Os CLPs constituem o cérebro do sistema de controle, responsáveis pela leitura de sensores e atuação sobre os atuadores.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{@{}p{3cm}|p{5cm}|p{2cm}|p{3cm}@{}}
+\toprule
+\textbf{Modelo} & \textbf{Especificações} & \textbf{Qtd} & \textbf{Valor Unitário} \\
+\midrule
+Siemens S7-1200 & CPU 1214C DC/DC/DC, 14 DI, 10 DO, 2 AI, PROFINET & 3 & R\$ 4.500,00 \\
+\midrule
+Siemens S7-1200 & Módulo SM 1223, 16 DI/16 DO 24VDC & 4 & R\$ 880,00 \\
+\midrule
+Siemens S7-1200 & Módulo SM 1231, 4 AI 13-bit & 2 & R\$ 1.200,00 \\
+\midrule
+Siemens S7-1200 & Cartão Memória 2GB & 3 & R\$ 350,00 \\
+\bottomrule
+\end{tabular}
+\caption{CLPs e módulos de expansão -- Fonte: Siemens Industrial Automation}
+\end{table}
+
+\textbf{Justificativa:} A linha S7-1200 foi escolhida por ser uma plataforma compacta e modular, ideal para aplicações de automação de pequeno a médio porte. O protocolo PROFINET integrado permite comunicação determinística via Ethernet, essencial para sincronização dos processos de prensagem.
+
+\subsection{Switches Industriais}
+
+Os switches industriais são responsáveis pela interconexão dos dispositivos na rede de chão de fábrica.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{@{}p{3cm}|p{5cm}|p{2cm}|p{3cm}@{}}
+\toprule
+\textbf{Modelo} & \textbf{Especificações} & \textbf{Qtd} & \textbf{Valor Unitário} \\
+\midrule
+Allen-Bradley & Stratix 2000, 8 portas 10/100, RJ45, IP30 & 6 & R\$ 2.800,00 \\
+\midrule
+Allen-Bradley & Stratix 2000, 5 portas + fibra, IP67 & 4 & R\$ 4.200,00 \\
+\midrule
+Cisco/AB & Módulo SFP 100FX, Fibra Multimodo & 8 & R\$ 650,00 \\
+\bottomrule
+\end{tabular}
+\caption{Switches industriais -- Fonte: Rockwell Automation}
+\end{table}
+
+\textbf{Justificativa:} A linha Stratix 2000 oferece robustez necessária para ambientes industriais com certificação IP30 (gabinete) e IP67 (campo). A opção com fibra óptica para interligação de áreas permite maior distância e imunidade a interferências eletromagnéticas.
+
+\subsection{Sensores e Transmissores}
+
+Os sensores são os "olhos e ouvidos" do sistema, responsáveis por capturar as variáveis do processo produtivo.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{@{}p{3cm}|p{5cm}|p{2cm}|p{3cm}@{}}
+\toprule
+\textbf{Modelo} & \textbf{Especificações} & \textbf{Qtd} & \textbf{Valor Unitário} \\
+\midrule
+Supmea & Transmissor Pressão SUP-P300, 4-20mA, 0-10 Bar & 8 & R\$ 850,00 \\
+\midrule
+ACAT & Transmissor Temperatura PT100, -50 a 400°C, IP65 & 12 & R\$ 380,00 \\
+\midrule
+Weilong & Sensor Nível Ultrassônico, 4-20mA, 0-10m & 6 & R\$ 650,00 \\
+\midrule
+SICK & Sensor Indutivo 12mm, M12, PNP & 24 & R\$ 220,00 \\
+\midrule
+SICK & Fotoelétrico Retrorefletivo, M18, 4m & 16 & R\$ 285,00 \\
+\bottomrule
+\end{tabular}
+\caption{Sensores e transmissores -- Fonte: Pesquisa de mercado 2026}
+\end{table}
+
+\textbf{Justificativa:} Sensores com saída 4-20mA foram escolhidos por sua imunidade a ruído elétrico e compatibilidade universal com CLPs industriais. A proteção IP65/IP67 garante operação em ambientes úmidos e empoeirados.
+
+\subsection{Interfaces Homem-Máquina (IHMs)}
+
+As IHMs permitem a interação entre operadores e o sistema de controle, proporcionando visualização e parâmetros.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{@{}p{3cm}|p{5cm}|p{2cm}|p{3cm}@{}}
+\toprule
+\textbf{Modelo} & \textbf{Especificações} & \textbf{Qtd} & \textbf{Valor Unitário} \\
+\midrule
+Siemens & SIMATIC HMI TP700, 7" Touch, PROFINET & 3 & R\$ 6.400,00 \\
+\midrule
+Siemens & SIMATIC HMI KTP400, 4" Touch, PROFINET & 4 & R\$ 3.200,00 \\
+\midrule
+Weinview & MT8051iP, 4.3", Ethernet, IP65 & 2 & R\$ 1.350,00 \\
+\bottomrule
+\end{tabular}
+\caption{Interfaces Homem-Máquina -- Fonte: Siemens/Weinview}
+\end{table}
+
+\textbf{Justificativa:} As IHMs da linha Comfort da Siemens oferecem alta durabilidade e integração nativa com CLPs S7-1200 via PROFINET. Os modelos de 7" serão instalados em painéis de controle principais, enquanto os de 4" em pontos locais de operação.
+
+\subsection{Sistema SCADA/MES}
+
+O sistema SCADA (Supervisory Control and Data Acquisition) é responsável pela supervisão centralizada e coleta de dados para análise histórica.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{@{}p{3cm}|p{5cm}|p{2cm}|p{3cm}@{}}
+\toprule
+\textbf{Software} & \textbf{Especificações} & \textbf{Qtd} & \textbf{Valor Total} \\
+\midrule
+AVEVA Edge & Licença Desenvolvimento + Runtime, 1500 tags & 1 & R\$ 18.500,00 \\
+\midrule
+AVEVA Edge & Thin Client, 5 usuários & 1 & R\$ 4.200,00 \\
+\midrule
+InPlant SCADA & Web Publisher, módulo adicional & 1 & R\$ 6.800,00 \\
+\bottomrule
+\end{tabular}
+\caption{Software SCADA -- Fonte: AVEVA/Supcon}
+\end{table}
+
+\textbf{Justificativa:} O AVEVA Edge (anteriormente InduSoft Web Studio) é uma plataforma HMI/SCADA flexível e escalável. A opção por Thin Client permite acesso via navegador web, facilitando a supervisão remota. O módulo Web Publisher possibilita a visualização de telas via internet/intranet.
+
+\subsection{Infraestrutura de Rede e Cabeamento}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{@{}p{3cm}|p{5cm}|p{2cm}|p{3cm}@{}}
+\toprule
+\textbf{Item} & \textbf{Especificações} & \textbf{Qtd} & \textbf{Valor Unitário} \\
+\midrule
+Cabo Ethernet & Industrial Cat6, LSZH, blindado, 305m & 4 & R\$ 1.850,00 \\
+\midrule
+Cabo Fibra & Multimodo OM3, 4 fibras, 1.000m & 1 & R\$ 4.200,00 \\
+\midrule
+Conectores & RJ45 Industrial, blindado, metal & 100 & R\$ 28,00 \\
+\midrule
+Racks & Paredes 19", 6U, IP65, industrial & 4 & R\$ 890,00 \\
+\midrule
+Organizadores & Guia de cabos, metálico, 2m & 20 & R\$ 65,00 \\
+\bottomrule
+\end{tabular}
+\caption{Infraestrutura de rede -- Fonte: Cotação mercado}
+\end{table}
+
+\subsection{Resumo do Orçamento}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{@{}p{6cm}|p{3cm}|p{4cm}@{}}
+\toprule
+\textbf{Categoria} & \textbf{Valor Total} & \textbf{\% do Total} \\
+\midrule
+CLPs e Módulos & R\$ 18.940,00 & 27,1\% \\
+\midrule
+Switches Industriais & R\$ 31.000,00 & 44,3\% \\
+\midrule
+Sensores e Transmissores & R\$ 15.580,00 & 22,3\% \\
+\midrule
+Interfaces HMI & R\$ 25.400,00 & 36,3\% \\
+\midrule
+Software SCADA & R\$ 29.500,00 & 42,2\% \\
+\midrule
+Infraestrutura de Rede & R\$ 9.430,00 & 13,5\% \\
+\midrule
+\textbf{TOTAL DO PROJETO} & \textbf{R\$ 69.850,00} & \textbf{100\%} \\
+\bottomrule
+\end{tabular}
+\caption{Resumo do orçamento total do projeto}
+\end{table}
+
+\section{Análise de Adequação e Escalabilidade}
+
+\subsection{Adequação Ambiental}
+
+Todos os equipamentos selecionados possuem certificações adequadas para o ambiente da fábrica de tijolos:
+
+\begin{table}[h]
+\centering
+\begin{tabular}{@{}p{4cm}|p{3cm}|p{3cm}|p{5cm}@{}}
+\toprule
+\textbf{Equipamento} & \textbf{Proteção IP} & \textbf{Temperatura} & \textbf{Observações} \\
+\midrule
+CLPs Siemens S7-1200 & IP20 & -20 a 60°C & Instalados em painéis \\
+\midrule
+Switches Stratix & IP30/IP67 & -40 a 75°C & Campo: IP67 \\
+\midrule
+Sensores & IP65/IP67 & -40 a 85°C & Adequados câmara cura \\
+\midrule
+IHMs & IP65/IP66 & 0 a 50°C & Painel selado \\
+\bottomrule
+\end{tabular}
+\caption{Adequação ambiental dos equipamentos}
+\end{table}
+
+\textbf{Proteção contra Interferência Elétrica:}
+\begin{itemize}
+    \item Cabos blindados para todos os sinais analógicos e digitais
+    \item Switches com portas RJ45 industriais com proteção ESD
+    \item Isolação galvânica em todos os transmissores 4-20mA
+    \item Aterramento conforme norma IEC 60364
+\end{itemize}
+
+\subsection{Escalabilidade do Sistema}
+
+A arquitetura proposta permite expansão futura com mínimo impacto:
+
+\begin{itemize}
+    \item \textbf{Rede PROFINET:} Permite adição de até 64 dispositivos por segmento
+    \item \textbf{CLPs:} Capacidade para até 8 módulos de expansão por CPU
+    \item \textbf{SCADA:} Licença expansível até 64.000 tags
+    \item \textbf{Switches:} Portas SFP disponíveis para expansão via fibra
+\end{itemize}
+
+\textbf{Cenários de Expansão:}
+\begin{enumerate}
+    \item Adição de nova linha de prensagem: +1 CLP, +6 sensores, +1 IHM
+    \item Ampliação da área de cura: +12 sensores T/U, +1 CLP remoto
+    \item Integração com ERP: Adição de gateway OPC UA sem modificar CLPs
+\end{enumerate}
+
+\subsection{Compatibilidade Corporativa}
+
+A solução proposta permite integração vertical futura com sistemas de gestão:
+
+\begin{itemize}
+    \item \textbf{OPC UA:} Todos os CLPs S7-1200 suportam OPC UA nativo
+    \item \textbf{MQTT:} SCADA com publicação para sistemas de nuvem
+    \item \textbf{SQL:} Histórico de dados diretamente em banco de dados corporativo
+    \item \textbf{REST API:} Interface para integração com sistemas web
+\end{itemize}
+
+\section{Análise de Viabilidade Técnica e Econômica}
+
+\subsection{Análise Custo-Benefício}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{@{}p{5cm}|p{5cm}|p{4cm}@{}}
+\toprule
+\textbf{Benefício} & \textbf{Descrição} & \textbf{Impacto Estimado} \\
+\midrule
+Redução de Refugo & Monitoramento preciso dos parâmetros de cura & -15\% desperdício \\
+\midrule
+Aumento Produtividade & Automação dos ciclos de prensagem & +25\% produção \\
+\midrule
+Economia Energia & Otimização câmaras de cura & -20\% consumo energia \\
+\midrule
+Melhoria Qualidade & Padronização dos processos & +10\% qualidade \\
+\midrule
+Redução Paradas & Manutenção preditiva baseada em dados & -30\% paradas \\
+\bottomrule
+\end{tabular}
+\caption{Benefícios esperados da implementação}
+\end{table}
+
+\subsection{Cálculo do Retorno sobre Investimento (ROI)}
+
+\textbf{Cenário Base (sem automação):}
+\begin{itemize}
+    \item Produção mensal: 50.000 tijolos
+    \item Preço unitário: R\$ 1,20
+    \item Custo produção: R\$ 0,90/unid
+    \item Refugo atual: 8\%
+    \item Lucro mensal: R\$ 10.800,00
+\end{itemize}
+
+\textbf{Cenário com Automação:}
+\begin{itemize}
+    \item Produção mensal: 62.500 tijolos (+25\%)
+    \item Refugo reduzido para: 3\%
+    \item Economia energia: R\$ 800,00/mês
+    \item Lucro mensal projetado: R\$ 20.325,00
+\end{itemize}
+
+\textbf{Cálculo do ROI:}
+\begin{itemize}
+    \item Investimento total: R\$ 69.850,00
+    \item Aumento mensal de lucro: R\$ 9.525,00
+    \item \textbf{Payback:} 7,3 meses
+    \item \textbf{ROI anual:} 163,7\%
+\end{itemize}
+
+\subsection{Gestão de Riscos}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{@{}p{4cm}|p{4cm}|p{4cm}|p{3cm}@{}}
+\toprule
+\textbf{Risco} & \textbf{Probabilidade} & \textbf{Impacto} & \textbf{Mitigação} \\
+\midrule
+Falha CLP principal & Baixa & Alto & Redundância software \\
+\midrule
+Interferência rede & Média & Médio & Cabos blindados \\
+\midrule
+Obsolescência software & Baixa & Alto & Escolha fornecedor estável \\
+\midrule
+Dependência fornecedor & Média & Médio & Múltiplos fornecedores \\
+\midrule
+Falha treinamento & Alta & Médio & Treinamento inicial \\
+\bottomrule
+\end{tabular}
+\caption{Matriz de riscos do projeto}
+\end{table}
+
+\subsection{Análise de Sensibilidade}
+
+Considerando variações no cenário econômico:
+
+\begin{table}[h]
+\centering
+\begin{tabular}{@{}p{4cm}|p{3cm}|p{3cm}|p{3cm}|p{3cm}@{}}
+\toprule
+\textbf{Cenário} & \textbf{Produtividade} & \textbf{Payback} & \textbf{ROI (12 meses)} \\
+\midrule
+Otimista & +35\% & 5,8 meses & 207\% \\
+\midrule
+Base (Projetado) & +25\% & 7,3 meses & 164\% \\
+\midrule
+Conservador & +15\% & 10,5 meses & 114\% \\
+\bottomrule
+\end{tabular}
+\caption{Análise de sensibilidade -- variações de produtividade}
+\end{table}
+
+\section{Arquitetura da Rede Proposta}
+
+\subsection{Topologia de Rede}
+
+A arquitetura proposta segue o modelo de três níveis da pirâmide de automação, interconectados via Ethernet Industrial:
+
+\begin{table}[h]
+\centering
+\begin{tabular}{@{}p{3cm}|p{4cm}|p{3cm}|p{5cm}@{}}
+\toprule
+\textbf{Nível} & \textbf{Protocolo} & \textbf{Equipamentos} & \textbf{Função} \\
+\midrule
+Nível 2 (SCADA) & TCP/IP & Servidor SCADA, clientes & Supervisão \\
+\midrule
+Nível 1 (Controle) & PROFINET & CLPs, IHMs, Switches & Controle lógico \\
+\midrule
+Nível 0 (Campo) & 4-20mA/Digital & Sensores, Atuadores & Aquisição dados \\
+\bottomrule
+\end{tabular}
+\caption{Níveis da arquitetura de rede}
+\end{table}
+
+\subsection{Diagrama de Arquitetura}
+
+\textbf{Descrição da Topologia:}
+
+\begin{enumerate}
+    \item \textbf{Nível Corporativo (Topo):}
+    \begin{itemize}
+        \item Servidor SCADA/Historiador
+        \item Estações de trabalho do gerenciamento
+        \item Conexão com ERP (futuro)
+    \end{itemize}
+
+    \item \textbf{Nível de Controle (Meio):}
+    \begin{itemize}
+        \item 3 CLPs Siemens S7-1200 controlando áreas:
+        \begin{itemize}
+            \item Área 1: Mistura e dosagem
+            \item Área 2: Prensagem
+            \item Área 3: Cura e estocagem
+        \end{itemize}
+        \item 7 IHMs distribuídas nos pontos de operação
+        \item Switches industriais formando backbone anel
+    \end{itemize}
+
+    \item \textbf{Nível de Campo (Base):}
+    \begin{itemize}
+        \item 26 sensores de temperatura/umidade
+        \item 8 transmissores de pressão
+        \item 6 sensores de nível
+        \item 40 sensores discretos (indutivos/fotoelétricos)
+    \end{itemize}
+\end{enumerate}
+
+\subsection{Segurança da Rede}
+
+A segurança da rede industrial é implementada em camadas:
+
+\begin{table}[h]
+\centering
+\begin{tabular}{@{}p{4cm}|p{9cm}@{}}
+\toprule
+\textbf{Camada} & \textbf{Medidas de Segurança} \\
+\midrule
+\textbf{Física} & Gabinetes trancados, controle de acesso, câmeras \\
+\midrule
+\textbf{Rede} & VLANs separadas (chão de fábrica x corporativo), firewall industrial \\
+\midrule
+\textbf{Aplicação} & Autenticação por usuário, níveis de acesso, logs de auditoria \\
+\midrule
+\textbf{Dados} & Comunicação criptografada, backup diário do histórico \\
+\bottomrule
+\end{tabular}
+\caption{Medidas de segurança por camada}
+\end{table}
+
+\section{Conclusão}
+
+ Com um investimento total de R\$ 69.850,00, o projeto apresenta um payback estimado de 7,3 meses e ROI de 164\% no primeiro ano, demonstrando atratividade econômica mesmo em cenários conservadores.
+
+\subsection{Benefícios Esperados}
+
+A implementação do sistema proposto resultará em:
+
+\begin{itemize}
+    \item \textbf{Ganho de Produtividade:} Aumento de 25\% na capacidade produtiva através de automação dos ciclos
+    \item \textbf{Redução de Custos:} Diminuição de 20\% no consumo energético e 15% no índice de refugo
+    \item \textbf{Melhoria de Qualidade:} Padronização dos processos produtivos com controle estatístico
+    \item \textbf{Base para Crescimento:} Arquitetura escalável que permite futuras expansões
+\end{itemize}
+
+\subsection{Retorno sobre Investimento}
+
+Com um investimento total de R\$ 69.850,00, o projeto apresenta um payback estimado de 7,3 meses e ROI de 164\% no primeiro ano, demonstrando atratividade econômica mesmo em cenários conservadores.
+
+\subsection{Alinhamento com Conceitos da Disciplina}
+
+O projeto aplica corretamente os conceitos de redes industriais estudados:
+
+\begin{itemize}
+    \item \textbf{Integração Vertical:} Do sensor (Nível 0) ao SCADA (Nível 2), permitindo tomada de decisão baseada em dados em tempo real
+    \item \textbf{Requisitos Críticos:} Robustez, determinismo e disponibilidade atendidos através de equipamentos industriais certificados
+    \item \textbf{Segregação de Redes:} Separação entre rede industrial e rede corporativa, preparada para futura integração via OPC UA
+\end{itemize}
+
+A fábrica de tijolos ecológicos, ao implementar este projeto, estará posicionada para competir efetivamente no mercado através da moderna automação industrial, alinhada aos conceitos da Indústria 4.0 e preparada para integrações futuras com sistemas de gestão corporativa.
+
+\section*{Referências Bibliográficas}
+
+\begin{enumerate}
+    \item \textbf{SIEMENS.} SIMATIC S7-1200 System Manual. Disponível em: \url{https://support.industry.siemens.com/}. Acesso em: mar. 2026.
+
+    \item \textbf{ROCKWELL AUTOMATION.} Stratix 2000 Unmanaged Switches User Manual. Disponível em: \url{https://www.rockwellautomation.com/}. Acesso em: mar. 2026.
+
+    \item \textbf{AVEVA.} AVEVA Edge Technical Documentation. Disponível em: \url{https://www.aveva.com/}. Acesso em: mar. 2026.
+
+    \item \textbf{TAKATU, Deivison S.} Redes Industriais -- Fundamentos e Aplicações. Material didático, 2024.
+
+    \item \textbf{IEC 60529.} Degrees of Protection Provided by Enclosures (IP Code). International Electrotechnical Commission, 1989.
+
+    \item \textbf{IEC 61158.} Industrial Communication Networks -- Fieldbus Specifications. International Electrotechnical Commission, 2019.
+
+    \item \textbf{LARA, Carla Eduarda Orlando de Moraes de.} Automação e controle industrial. Curitiba: Contentus, 2021.
+
+    \item \textbf{KAGERMANN, Henning et al.} Recommendations for Implementing Strategic Initiative Industrie 4.0. Final Report of the Industrie 4.0 Working Group, 2013.
+
+    \item \textbf{PI (PROFIBUS \& PROFINET INTERNATIONAL).} PROFINET Technology and Application. System Manual, 2020.
+\end{enumerate}
+
+\end{document}
